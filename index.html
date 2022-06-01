@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="cards.css">
+    <title>Cards</title>
 </head>
 <body>
     <section class="container">
@@ -23,6 +24,19 @@
             <canvas id="drawing-board"></canvas>
         </div>
     </section>
+
+    <div class="cards-container">
+        <div class="sentence-cards-container">
+
+            <div class="player-card-noun1 card-slot"></div>
+            <div class="player-card-verb card-slot"></div>
+            <div class="player-card-preposition card-slot"></div>
+            <div class="player-card-noun2 card-slot"></div>
+
+        </div>
+        <div class="player-deck deck">7</div>
+    </div>
+
     <script src="script.js" type="module"></script>
     <script src="./index.js"></script>
 </body>
