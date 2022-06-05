@@ -8,9 +8,18 @@ function Chat() {
 
   const [message, setMessage] = useState('');
   const [messageReceived, setMessageReceived] = useState('');
+  const [room, setRoom] = useState('')
+
+
+  const joinRoom = () => {
+      if (room !== '') {
+        console.log({room});
+        socket.emit("join_room", room)
+      }
+  }
 
   const sendMessage = () => {
-    socket.emit("send_message", {message})
+    socket.emit("send_message", {message, room})
   }
 
   useEffect(() => {
@@ -22,6 +31,12 @@ function Chat() {
 
   return (
     <div>
+      <input placeholder='Room...'
+      onChange={(event) => {
+        setRoom(event.target.value)
+      }}
+      />
+      <button onClick={joinRoom}>Join Room</button>
       <input placeholder='Message...'
       onChange={(event) => {
         setMessage(event.target.value)
