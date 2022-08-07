@@ -1,5 +1,7 @@
-const SUITS = ['♤', '♡', '♧', '♢']
-const VALUES = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+// const SUITS = ['♤', '♡', '♧', '♢']
+const SUITS = ['Noun', 'Verb', 'Preposition', 'Noun2']
+// const VALUES = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+const VALUES = [1, 2]
 
 export default class Deck {
     constructor(cards = freshDeck()) {
