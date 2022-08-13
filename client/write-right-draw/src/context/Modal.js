@@ -26,6 +26,7 @@ export function Modal({ onClose, children }) {
 
   if (modalNode === false) return null;
 
+  //modal-background div needs to be rendered before the modal-content because it will be placed behind the depth of content if it comes before the conent in the DOM tree
   return ReactDOM.createPortal(
     <div id="modal">
       <div id="modal-background" onClick={onClose}></div>
